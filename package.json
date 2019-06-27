@@ -1,0 +1,27 @@
+{
+  "name": "@nelts/nelts.github.io",
+  "version": "1.0.0",
+  "description": "nelts document",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build . && mv .vuepress/dist docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelts/nelts.github.io.git"
+  },
+  "keywords": [
+    "document",
+    "nelts"
+  ],
+  "author": "cevio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nelts/nelts.github.io/issues"
+  },
+  "homepage": "https://github.com/nelts/nelts.github.io#readme",
+  "dependencies": {
+    "vuepress-theme-api": "^0.2.1"
+  }
+}
