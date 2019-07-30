@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>安装 | Hello, World.</title>
+    <meta name="description" content="📦 🎨 A api-friendly theme for VuePress.">
+    
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.82356fe1.css" as="style"><link rel="preload" href="/docs/assets/js/app.d76baf5b.js" as="script"><link rel="preload" href="/docs/assets/js/6.43a04369.js" as="script"><link rel="prefetch" href="/docs/assets/js/2.616b53dd.js"><link rel="prefetch" href="/docs/assets/js/3.4ddc58d9.js"><link rel="prefetch" href="/docs/assets/js/4.6bef892f.js"><link rel="prefetch" href="/docs/assets/js/5.81314610.js"><link rel="prefetch" href="/docs/assets/js/7.3b030e8a.js"><link rel="prefetch" href="/docs/assets/js/8.bb3c3e49.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.82356fe1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme__container sidebar-open"><div class="row"><div class="col-md-2"><div class="sidebar"><div class="group"><div class="group__title">home</div> <div class="group__body"><div class="group__category category"><div class="category__label"><a href="/docs/" class="router-link-active">Homepage</a></div></div>  </div></div><div class="group"><div class="group__title">get-started</div> <div class="group__body"><div class="group__category category"><div class="category__label"><a href="/docs/get-started/" class="router-link-active">简介</a></div></div>  <div name="/get-started/dir.html" class="group__category category"><div class="category__label"><a href="/docs/get-started/dir.html">项目结构</a></div> <div class="category__headers"><div class="category__header-item"><a href="/docs/get-started/dir.html#根目录">根目录</a></div></div><div class="category__headers"><div class="category__header-item"><a href="/docs/get-started/dir.html#src目录">Src目录</a></div></div></div><div name="/get-started/usage.html" class="group__category category category--selected category--active"><div class="category__label"><a href="/docs/get-started/usage.html" class="router-link-exact-active router-link-active">安装</a></div> <div class="category__headers"><div class="category__header-item"><a href="/docs/get-started/usage.html#编译您的项目">编译您的项目</a></div></div><div class="category__headers"><div class="category__header-item"><a href="/docs/get-started/usage.html#发布">发布</a></div></div></div></div></div><div class="group"><div class="group__title">primary</div> <div class="group__body"><div class="group__category category"><div class="category__label"><a href="/docs/primary/">目录</a></div></div>  </div></div></div></div> <div class="col-md-10"><div class="page__container"><div class="content custom"><h1 id="安装"><a href="#安装" aria-hidden="true" class="header-anchor">#</a> 安装</h1> <p><strong>Nelts</strong> 提供了一套完整的脚手架来帮助您完成项目的创建、代码碎片生成、插件安装以及服务的启动重启等功能。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">npm</span> i -g pm2
+$ pm2 <span class="token function">install</span> pm2-intercom
+$ <span class="token function">npm</span> i -g @nelts/cli
+</code></pre></div><p>通过 <code>nelts -h</code>命令我们可以看到具有以下的功能</p> <div class="language-bash extra-class"><pre class="language-bash"><code>shenyunjie:~ shenyunjie$ nelts -h
+Usage: nelts <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token punctuation">[</span>command<span class="token punctuation">]</span>
+
+Options:
+  -v, --version   output the version number
+  -h, --help      output usage information
+
+Commands:
+  init <span class="token punctuation">[</span>project<span class="token punctuation">]</span>  create a new project with nelts.
+</code></pre></div><p>通过<code>nelts-server -h</code>命令我们可以看到以下的功能</p> <div class="language-bash extra-class"><pre class="language-bash"><code>shenyunjie:~ shenyunjie$ nelts-server -h
+Usage: nelts-server <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token punctuation">[</span>command<span class="token punctuation">]</span>
+
+Options:
+  -v, --version    output the version number
+  -h, --help       output usage information
+
+Commands:
+  dev <span class="token punctuation">[</span>options<span class="token punctuation">]</span>    run server as dev mode, <span class="token function">env</span> <span class="token operator">=</span> development
+  start <span class="token punctuation">[</span>options<span class="token punctuation">]</span>  run server with pm2, <span class="token function">env</span> <span class="token operator">=</span> production
+  restart          restart the production server
+  stop             stop the production server
+</code></pre></div><blockquote><p><code>nelts</code>命令主要用于开发时候帮助我们解决一些重复劳动的问题，而<code>nelts-server</code>主要帮助我们调试、启动、重启和停止服务。</p></blockquote> <h1 id="创建第一个项目"><a href="#创建第一个项目" aria-hidden="true" class="header-anchor">#</a> 创建第一个项目</h1> <p>建议通过脚手架创建项目</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ nelts init my-project
+$ <span class="token function">cd</span> my-project
+$ <span class="token function">npm</span> ci
+</code></pre></div><p>项目创建完毕后，您可以通过调试命令查看服务：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">npm</span> run dev
+</code></pre></div><p>您可以打开<code>http://127.0.0.1:8080</code>查看到网页内容为<code>hello world</code>。</p> <h2 id="编译您的项目"><a href="#编译您的项目" aria-hidden="true" class="header-anchor">#</a> 编译您的项目</h2> <p>因为项目使用 TS 编写的，那么需要编译后才能使用，编译后会在根目录下生成<code>dist/</code>目录，里面就是最终的服务代码。</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">npm</span> run build
+</code></pre></div><h2 id="发布"><a href="#发布" aria-hidden="true" class="header-anchor">#</a> 发布</h2> <p>您可以将生成后的整个项目放置在服务器上，然后运行您需要的命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ <span class="token function">npm</span> run start <span class="token comment"># 启动服务</span>
+$ <span class="token function">npm</span> run restart <span class="token comment"># 重启服务</span>
+$ <span class="token function">npm</span> run stop <span class="token comment"># 停止服务</span>
+$ pm2 logs <span class="token comment"># 查看启动日志</span>
+</code></pre></div></div> <div class="content__footer-container"><div class="content__footer"><!----> <!----></div></div></div></div></div></div></div>
+    <script src="/docs/assets/js/app.d76baf5b.js" defer></script><script src="/docs/assets/js/6.43a04369.js" defer></script>
+  </body>
+</html>
