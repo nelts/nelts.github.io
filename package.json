@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/nelts/nelts.github.io#readme",
   "dependencies": {
-    "vuepress-theme-api": "^0.2.1"
+    "vuepress-theme-api": "^1.0.1"
   }
 }
